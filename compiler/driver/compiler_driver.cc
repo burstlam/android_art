@@ -1717,6 +1717,8 @@ static const char* class_initializer_black_list[] = {
   "Landroid/graphics/drawable/ShapeDrawable;",  // Sub-class of Drawable.
   "Landroid/graphics/drawable/StateListDrawable;",  // Sub-class of Drawable.
   "Landroid/graphics/drawable/TransitionDrawable;",  // Sub-class of Drawable.
+  "Landroid/graphics/ColorFilterMaker;",  // Calls android.graphics.Matrix.native_create.
+  "Landroid/graphics/ColorFilterMaker$1;",  // Requires Matrix.
   "Landroid/graphics/Matrix;",  // Calls android.graphics.Matrix.native_create.
   "Landroid/graphics/Matrix$1;",  // Requires Matrix.
   "Landroid/graphics/PixelFormat;",  // Calls android.graphics.PixelFormat.nativeClassInit().
@@ -1746,7 +1748,8 @@ static const char* class_initializer_black_list[] = {
   "Landroid/media/SoundPool;",  // Calls OsConstants.initConstants.
   "Landroid/media/videoeditor/MediaArtistNativeHelper;",  // Calls OsConstants.initConstants.
   "Landroid/media/videoeditor/VideoEditorProfile;",  // Calls OsConstants.initConstants.
-  "Landroid/mokee/location/PhoneLocation;",  // Calls OsConstants.initConstants.
+  "Landroid/mokee/location/PhoneLocation;",  // Calls OsConstants.initConstants
+  "Landroid/mokee/util/MoKeeUtil;",  // Calls OsConstants.initConstants
   "Landroid/mtp/MtpDatabase;",  // Calls OsConstants.initConstants.
   "Landroid/mtp/MtpDevice;",  // Calls OsConstants.initConstants.
   "Landroid/mtp/MtpServer;",  // Calls OsConstants.initConstants.
